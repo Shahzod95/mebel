@@ -2,10 +2,15 @@ const { Router } = require('express')
 const router = Router()
 
 const {
-    getMebels
+    getMebels,
+    getMebelById,
+    addMebel
 } = require("../controllers/mebelControllers")
 
-router.post('/', getMebels)
+const {upload} = require("../utils/multer")
 
+router.get('/', getMebels)
+router.get('/:id', getMebelById)
+router.post('/add', upload.fields([{name:"img_list", maxCount:20}, {name:"img"}]), addMebel)
 
 module.exports = router

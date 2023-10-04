@@ -31,7 +31,7 @@ const MebelSchema = new Schema({
     type: String
   },
   description:{
-    type: Text
+    type: String
   }
 });
 
