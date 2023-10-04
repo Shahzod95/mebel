@@ -134,17 +134,17 @@ const deleteMebel = async (req, res) => {
     try {
         const mebel = await mebelModel.findById(req.params.id)
         if(mebel) {
-
-                mebel.img_list.map((item => {
-                    fs.unlink(path.join(__dirname, "../", item), (err, data) => {
-                        if(err){
-                            console.log(err)
-                        } else {
-                            console.log("Remove image list in mebel")
-                        }
-                    })
-                }))
-
+            
+            mebel.img_list.map((item => {
+                fs.unlink(path.join(__dirname, "../", item), (err, data) => {
+                    if(err){
+                        console.log(err)
+                    } else {
+                        console.log("Remove image list in mebel")
+                    }
+                })
+            }))
+            
                 fs.unlink(path.join(__dirname, "../", mebel.img), (err, data) => {
                     if(err){
                         console.log(err)
@@ -152,7 +152,7 @@ const deleteMebel = async (req, res) => {
                         console.log("Remove image in mebel")
                     }
                 })
-
+                await mebelModel.deleteOne({ _id: req.params.id });
                 res.status(201).json({
                     message:"deleted mebel",
                 })

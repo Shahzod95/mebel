@@ -1,6 +1,6 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
-// const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 const keys = require('../config/keys');
 
 const {secret} = keys.jwt
@@ -10,13 +10,11 @@ const User = require("../models/user.Model")
 const login = async (req, res) => {
     try {
       const { username, password } = req.body;
-  
       if (!username) {
         return res
           .status(400)
           .json({ error: 'You must enter an username.' });
       }
-  
       if (!password) {
         return res.status(400).json({ error: 'You must enter a password.' });
       }
@@ -28,14 +26,15 @@ const login = async (req, res) => {
           .send({ error: 'No user found for this username.' });
       }
   
-    //   const isMatch = await bcrypt.compare(password, user.password);
+      const isMatch = await bcrypt.compare(password, user.password);
+
   
-    //   if (!isMatch) {
-    //     return res.status(400).json({
-    //       success: false,
-    //       error: 'Password Incorrect'
-    //     });
-    //   }
+      if (!isMatch) {
+        return res.status(400).json({
+          success: false,
+          error: 'Password Incorrect'
+        });
+      }
   
       const payload = {
         id: user.id
