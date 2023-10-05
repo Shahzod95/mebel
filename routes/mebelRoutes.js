@@ -62,7 +62,7 @@
 /**
  * @swagger
  * tags:
- *   name: Mebel
+ *   name: Mebels
  *   description: The Mebels managing API
  * /mebel:
  *   get:
