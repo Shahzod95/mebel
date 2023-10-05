@@ -29,6 +29,9 @@ const options = {
         },
         servers:[
             {
+                url:"https://mebel-j1jg.onrender.com/api/"
+            },
+            {
                 url:"http://localhost:5000/api/"
             },
         ]
