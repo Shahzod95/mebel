@@ -97,7 +97,7 @@ const login = async (req, res) => {
       };
   
       const token = jwt.sign(payload, secret, { expiresIn: tokenLife });
-      console.log(token)
+
       if (!token) {
         throw new Error();
       }
