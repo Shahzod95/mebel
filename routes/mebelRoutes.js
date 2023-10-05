@@ -25,10 +25,10 @@
  *           type: string
  *           description: The title of your mabel
  *         old:
- *           type: string
+ *           type: number
  *           description: The old of your mabel
  *         new:
- *           type: string
+ *           type: number
  *           description: The title of your mabel  
  *         type:
  *           type: string
