@@ -2,7 +2,7 @@
  * @swagger
  * components:
  *   schemas:
- *     Users:
+ *     User:
  *       type: object
  *       required:
  *         - username
@@ -34,7 +34,7 @@
  *             schema:
  *               type: array
  *               items:
- *                 $ref: '#/components/schemas/Users'
+ *                 $ref: '#/components/schemas/User'
  */
 
 const { Router } = require('express')
