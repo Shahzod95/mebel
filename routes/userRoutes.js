@@ -41,9 +41,11 @@ const { Router } = require('express')
 const router = Router()
 
 const {
-    login
+    login,
+    register
 } = require("../controllers/userControllers")
 
+router.post('/register', register)
 router.post('/login', login)
 
 
