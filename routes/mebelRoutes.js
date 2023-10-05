@@ -2,7 +2,7 @@
  * @swagger
  * components:
  *   schemas:
- *     Mebels:
+ *     Mebel:
  *       type: object
  *       required:
  *         - title
@@ -62,7 +62,7 @@
 /**
  * @swagger
  * tags:
- *   name: Mebels
+ *   name: Mebel
  *   description: The Mebels managing API
  * /mebel:
  *   get:
@@ -76,7 +76,7 @@
  *             schema:
  *               type: array
  *               items:
- *                 $ref: '#/components/schemas/Mebels'
+ *                 $ref: '#/components/schemas/Mebel'
  * /mebel/add:
  *   post:
  *     summary: Create a new mebel
@@ -86,14 +86,14 @@
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/Mebels'
+ *             $ref: '#/components/schemas/Mebel'
  *     responses:
  *       200:
  *         description: The created mebel.
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/Mebels'
+ *               $ref: '#/components/schemas/Mebel'
  *       500:
  *         description: Some server error
  * /mebel/{id}:
@@ -113,7 +113,7 @@
  *         contens:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/Mebels'
+ *               $ref: '#/components/schemas/Mebel'
  *       404:
  *         description: The travel was not found
  *   put:
@@ -131,14 +131,14 @@
  *      content:
  *        application/json:
  *          schema:
- *            $ref: '#/components/schemas/Mebels'
+ *            $ref: '#/components/schemas/Mebel'
  *    responses:
  *      200:
  *        description: The mebel was updated
  *        content:
  *          application/json:
  *            schema:
- *              $ref: '#/components/schemas/Travels'
+ *              $ref: '#/components/schemas/Mebel'
  *      404:
  *        description: The travel was not found
  *      500:
