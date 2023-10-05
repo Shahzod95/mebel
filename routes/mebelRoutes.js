@@ -40,8 +40,11 @@
  *           type: string
  *           description: The mabel sale
  *         img_list:
- *           type: string
+ *           type: array
  *           description: The mabel img_list
+ *           items:
+ *              type: string
+ *              description: The imaage list item      
  *         img:
  *           type: string
  *           description: The mabel img
