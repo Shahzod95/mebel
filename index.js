@@ -20,26 +20,26 @@ app.use('/api/mebel', require('./routes/mebelRoutes'))
 app.use('/api/user', require('./routes/userRoutes'))
 
 
-const options = {
-    definition:{
-        openapi:"3.0.0",
-        info:{
-            title:"Mebel api doc",
-            version: "0.1"
-        },
-        servers:[
-            {
-                url:"https://mebel-j1jg.onrender.com/api/"
-            },
-            {
-                url:"http://localhost:5000/api/"
-            },
-        ]
-    },
-    apis: ["./routes/*.js"],
-}
+// const options = {
+//     definition:{
+//         openapi:"3.0.0",
+//         info:{
+//             title:"Mebel api doc",
+//             version: "0.1"
+//         },
+//         servers:[
+//             {
+//                 url:"https://mebel-j1jg.onrender.com/api/"
+//             },
+//             {
+//                 url:"http://localhost:5000/api/"
+//             },
+//         ]
+//     },
+//     apis: ["./routes/*.js"],
+// }
 
-const spacs = swaggerjsdoc(options)
-app.use('/api-docs', swaggerui.serve, swaggerui.setup(spacs))
-const PORT = process.env.PORT || 5000
-app.listen(PORT, console.log(`Server listening on port: ${PORT}`))
+// const spacs = swaggerjsdoc(options)
+// app.use('/api-docs', swaggerui.serve, swaggerui.setup(spacs))
+// const PORT = process.env.PORT || 5000
+app.listen()
