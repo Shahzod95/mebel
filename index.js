@@ -42,4 +42,4 @@ const options = {
 const spacs = swaggerjsdoc(options)
 app.use('/api-docs', swaggerui.serve, swaggerui.setup(spacs))
 // const PORT = process.env.PORT || 5000
-app.listen()
+app.listen(5000)
