@@ -1,6 +1,5 @@
 const express = require('express')
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose')
+const http = require('http')
 const path = require('path')
 const swaggerjsdoc = require('swagger-jsdoc')
 const swaggerui = require('swagger-ui-express')
@@ -42,4 +41,10 @@ const options = {
 const spacs = swaggerjsdoc(options)
 app.use('/api-docs', swaggerui.serve, swaggerui.setup(spacs))
 // const PORT = process.env.PORT || 5000
-app.listen(5000)
+// app.listen(5000)
+
+const server = http.createServer(app)
+
+server.listen(5000, ()=> {
+    console.log("Server working ....")
+})
