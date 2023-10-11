@@ -2,9 +2,8 @@
   "name": "mebel",
   "version": "1.0.0",
   "description": "",
-  "main": "node index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index"
   },
   "engines": {
     "node": "18.16.0"
