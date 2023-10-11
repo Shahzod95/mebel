@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node index"
+    "start": "node index.js"
   },
   "engines": {
     "node": "18.16.0"
   },
+  "builds": [
+    { "src": "index.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "index.js" }
+  ]
   "keywords": [],
   "author": "",
   "license": "ISC",

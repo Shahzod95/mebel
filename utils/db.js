@@ -9,7 +9,11 @@ const setupDB = async () => {
   try {
     // Connect to MongoDB
     mongoose
-    .connect(database.url)
+    .connect(database.url, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      strictQuery: false
+    })
     .then(() =>
     console.log(`MongoDB Connected!...`)
     )
