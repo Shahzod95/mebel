@@ -12,7 +12,6 @@ const setupDB = async () => {
     .connect(database.url, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      strictQuery: false
     })
     .then(() =>
     console.log(`MongoDB Connected!...`)

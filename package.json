@@ -2,18 +2,13 @@
   "name": "mebel",
   "version": "1.0.0",
   "description": "",
+  "main":"index.js",
   "scripts": {
-    "start": "node index.js"
+    "test":"echo \nError: no test specified\" && exit 1"
   },
   "engines": {
     "node": "18.16.0"
   },
-  "builds": [
-    { "src": "index.js", "use": "@now/node" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "index.js" }
-  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
